@@ -80,12 +80,33 @@ class _HomePageState extends State<HomePage> {
             name: "Add Amount",
             icon: Icons.add,
             colour: Theme.of(context).colorScheme.surface,
-            onPressed: () {},
+            onPressed: () {
+              showModalBottomSheet<void>(
+                context: context,
+                builder: (BuildContext context) {
+                  return Container(
+                    height: 200,
+                    color: Theme.of(context).colorScheme.surface,
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          const Text('Card Payment'),
+                          ElevatedButton(
+                            child: const Text('Submit card details'),
+                            onPressed: () => Navigator.pop(context),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }
+              );
+            },
           ),
         ],
       )
-       
-      
     );
   }
 }
