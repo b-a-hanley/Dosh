@@ -23,8 +23,14 @@ class MyButton extends StatelessWidget {
         margin: EdgeInsets.all(20),
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: colour ?? Theme.of(context).colorScheme.secondary,
+          color: colour ?? Theme.of(context).colorScheme.primary,
           borderRadius: BorderRadius.circular(50),
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 4.0,
+              offset: Offset(0, 2), // similar to default elevation 1
+            ),
+          ],
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

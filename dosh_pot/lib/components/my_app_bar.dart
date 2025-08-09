@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../pages/home_page.dart';
 
 class MyAppBar extends AppBar {
@@ -11,7 +10,7 @@ class MyAppBar extends AppBar {
     required this.name,
   }) : super(
       automaticallyImplyLeading: false,
-      backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      backgroundColor: Theme.of(context).colorScheme.primary,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -19,7 +18,7 @@ class MyAppBar extends AppBar {
           GestureDetector(
             child: Row(
               children: [
-                Image.asset("assets/images/doshpot.png", height: 50),
+                Image.asset("assets/images/doshpot.png", width: 100, height: 40)
               ],
             ),
             onTap: () {

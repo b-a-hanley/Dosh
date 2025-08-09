@@ -13,17 +13,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.primary,
-      appBar: MyAppBar(name: "AnchoredMind", context),
+      backgroundColor: Colors.white,
+      appBar: MyAppBar(context, name: 'Dosh'),
       body: Column( 
         children: [
-          
           Expanded(
             child: ListView(
               padding: const EdgeInsets.all(8),
               children: <Widget>[
                 Card(
-                    color: Theme.of(context).colorScheme.onSecondary,
+                    color: Theme.of(context).colorScheme.surface,
                     margin:
                     EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                     shape: RoundedRectangleBorder(
@@ -36,7 +35,7 @@ class _HomePageState extends State<HomePage> {
                     )
                 ),
                 Card(
-                    color: Theme.of(context).colorScheme.onSecondary,
+                    color: Theme.of(context).colorScheme.surface,
                     margin:
                     EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                     shape: RoundedRectangleBorder(
@@ -48,7 +47,8 @@ class _HomePageState extends State<HomePage> {
                           Text("Monthly Expenditure"),
                           Padding(padding: EdgeInsets.all(100)),
                           Card(
-                             shape: RoundedRectangleBorder(
+                            color: Colors.blue,
+                            shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25),
                             ),
                           )
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                     )
                 ),
                 Card(
-                    color: Theme.of(context).colorScheme.primary,
+                    color: Theme.of(context).colorScheme.surface,
                     margin: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
           MyButton(
             name: "Add Amount",
             icon: Icons.add,
-            colour: Colors.white,
+            colour: Theme.of(context).colorScheme.surface,
             onPressed: () {},
           ),
         ],
